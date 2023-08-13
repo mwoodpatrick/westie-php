@@ -22,10 +22,24 @@ $datetime = new DateTime();
 $timezone = new DateTimeZone('America/Los_Angeles');
 $datetime->setTimezone($timezone);
 echo $datetime->format("F j, Y, g:i a");
-echo xdebug_info();
-// echo php_info();
 ?>
 
+<a href="https://www.w3schools.com">Visit W3Schools</a>
+
+<h1>Loaded Files</h1>
+
+<?php
+var_dump(php_ini_loaded_file(), php_ini_scanned_files());
+?>
+
+<h1>PHP Info</h1>
+
+<a href="https://linuxconfig.org/how-to-create-phpinfo-php-page">How to create phpinfo.php page</a>
+
+<?php echo phpinfo(); ?>
+
+<h1>XDebug</h1>
+<?php echo xdebug_info(); ?>
 
 </body>
 </html>
