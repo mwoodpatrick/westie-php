@@ -1,0 +1,29 @@
+{
+    // https://code.visualstudio.com/Docs/editor/tasks
+    // https://code.visualstudio.com/docs/editor/tasks#vscode
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "bridge-to-kubernetes.service",
+            "type": "bridge-to-kubernetes.service",
+            "service": "bikes",
+            "ports": [
+                3000
+            ],
+            "useKubernetesServiceEnvironmentVariables": true
+        }
+    ]
+}
